@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>9h</title>
+  </head>
+  <body>
+    <input class="js-input" placeholder='Type Something' onkeyup="
+      fun1(event); 
+      ">
+      <p class="js-screen"></p>
+    <script>
+      
+
+      function fun1(event){ 
+        let inputElement = document.querySelector('.js-input')
+        document.querySelector('.js-screen').innerHTML = inputElement.value;
+      }
+    </script>
+  </body>
+</html>
+
+
+
+

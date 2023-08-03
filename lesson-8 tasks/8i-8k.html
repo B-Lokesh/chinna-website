@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>8i</title>
+  </head>
+  <body>
+    <button onclick="
+      playGame('heads');
+    ">heads</button>
+
+    <button onclick="
+      playGame('tails');
+    ">tails</button>
+
+    <button onclick="
+      score.wins = 0;
+      score.losses = 0;
+      localStorage.removeItem('score');
+    ">Refresh score</button>
+
+    <script>
+      const score =JSON.parse(localStorage.getItem('score'))|| {
+        wins : 0,
+        losses :0,
+        
+      };
+      function playGame(guess)
+      {
+        let ranNum = Math.random();
+        let result = '';
+        //let guess = 'heads';
+        if(ranNum < 0.5)
+        {
+          result = 'heads';
+
+        }
+        else{
+          result = 'tails';
+        }
+
+        if(result === guess)
+        {
+          score.wins++;
+          console.log('You Win!');
+        }
+        else{
+          score.losses++;
+          console.log('You Lost!');
+        }
+        
+        console.log(score);
+        localStorage.setItem('score',JSON.stringify(score));
+      }
+      
+
+      /*using ternary operator
+
+      result=ranNum < 0.5 ? 'heads' : 'tails';
+      console.log(result === guess ? 'you win!': 'You lost');  */
+    </script>
+  </body>
+</html>
+

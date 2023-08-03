@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>9e</title>
+  </head>
+  <body>
+    <input class="emptyb" placeholder="name" onkeydown="
+      onEnter(event);
+      ">
+    <button onclick="
+     hello();
+    ">submit</button>
+
+    <p class="class1"></p>
+    <script>
+      function onEnter(event){
+          if(event.key === 'Enter')
+          {
+            hello();
+          }
+      }
+
+      function hello(){
+      let a = document.querySelector('.emptyb');
+      let b= a.value;
+      document.querySelector('.class1').innerHTML =`Your name is :${b}`;
+      }
+    </script>
+  </body>
+</html>

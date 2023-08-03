@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>6f-6j</title>
+  </head>
+  <body>
+    <script>
+      let ranNum = Math.random();
+      let result = '';
+      let guess = 'heads';
+     /* if(ranNum < 0.5)
+      {
+        result = 'heads';
+
+      }
+      else{
+        result = 'tails';
+      }
+
+      if(result === guess)
+      {
+        console.log('You Win!');
+      }
+      else{
+        console.log('You Lost!');
+      }*/
+
+      // using ternary operator
+
+      result=ranNum < 0.5 ? 'heads' : 'tails';
+      console.log(result === guess ? 'you win!': 'You lost');
+    </script>
+  </body>
+</html>
+
