@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>11u</title>
+  </head>
+  <body>
+    <script>
+      function removeEgg(foods){
+        let foods1 = foods.slice();
+        foods1 = foods1.reverse();
+        const result =[];
+        let count =0;
+        for(let i=0; i<foods.length; i++)
+        {
+          let value = foods1[i];
+          if((value === 'egg') && count < 2){
+            count++;
+            continue;
+          }
+          else{
+           result.push(foods1[i]);
+          }
+        }
+        console.log(foods);//no change in ori. array
+        return result.reverse();
+        
+      }
+      console.log(removeEgg(['egg','apple','egg','egg','ham']));
+    </script>
+  </body>
+</html>
+
+
+
+
